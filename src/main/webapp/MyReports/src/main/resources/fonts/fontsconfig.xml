@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+    <fontFamily name="DevanagariFont">
+        <normal>fonts/NotoSansDevanagari-Regular.ttf</normal>
+        <pdfEmbedded>true</pdfEmbedded>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <exportFonts>
+            <export key="net.sf.jasperreports.pdf">fonts/NotoSansDevanagari-Regular.ttf</export>
+        </exportFonts>
+    </fontFamily>
+    
+    <fontFamily name="GujaratiFont">
+        <normal>fonts/NotoSansGujarati-Regular.ttf</normal>
+        <pdfEmbedded>true</pdfEmbedded>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <exportFonts>
+            <export key="net.sf.jasperreports.pdf">fonts/NotoSansGujarati-Regular.ttf</export>
+        </exportFonts>
+    </fontFamily>
+    
+</fontFamilies>

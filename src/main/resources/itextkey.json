@@ -1,0 +1,163 @@
+[
+  {
+    "product": "itext-core",
+    "licensee": {
+      "company": "Shree Infotech",
+      "name": "Jaykumar Vaghasiya",
+      "email": "jay.shree210410@gmail.com"
+    },
+    "key": "70e11077e3ccee2633fe93bbf63f538d595fee9f7f89c37c4ce5a07eddecbdb0",
+    "creationDate": "2025-07-17",
+    "expirationDate": "2025-08-17",
+    "onExpiration": "fail",
+    "platform": "any",
+    "licenseType": "trial",
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "LlZdUbhjOOtktYpwrkclpfo5ksNhGOS5u0wrAhdu2Lo6NzrBUCyNtZ9OE9rTDhLiGaIRDKQbbJ4eohBSp1DMLf9D8rspD2COdiUnxCWgViys94otNmdTjYicod4cvccjy+COfo88bpqw2EINzDt514m+5jPFDkuYiqBRljgo0GwqoZ+ttj0VA+mzGy2XUK4Np//auGENKQi0Zf8SPuMpPiCu4aLJiv7EfjqoXiYMZmfRY29QaVAW+9CIoUupJUjLk3l4j5qOFoPfp8XfWGLX94kTjQxi2ZdlYU0h+RaeTcyKi/a0ewN0DJ03CHdpYzRJhV4OLAulfZH2b75bQAjvxiG3FKDmxiOX3pbUtsDkp/J7WfKPAbNK/SLgj69j8BfRJzxa4bCi8g/zmt3itPlJTGOkIPP20F/Bo5IA+UiVhsSF0pfjsgYz+FKSV4B/2/HgoNlFUM1CHQRXCHMIPBhqvZwKwWj80BE9DIli237+Qvo9OrKQdt4N5cKIsPbWcj4sJ9meha9ZnKMwTsAfyLZbXKl/HLGzl2GF9C+Yz1USUVf1F+R/1ww1sFK4IhUOhq+nKqwhwixYSHianwHki4NAfTyJnCNO7PbuC7zXF3VnlpRDbqbRPzWXwgouaLi1JAvSv0qQG2tRGN0Gte+QbtBK6Jb+eKIczICFnt2Hnxy1elQ="
+  },
+  {
+    "product": "pdfXfa",
+    "licensee": {
+      "company": "Shree Infotech",
+      "name": "Jaykumar Vaghasiya",
+      "email": "jay.shree210410@gmail.com"
+    },
+    "key": "70e11077e3ccee2633fe93bbf63f538d595fee9f7f89c37c4ce5a07eddecbdb0",
+    "creationDate": "2025-07-17",
+    "expirationDate": "2025-08-17",
+    "onExpiration": "fail",
+    "platform": "any",
+    "licenseType": "trial",
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "HQ0Zen/aT5sCAhcQ90rOXfNgB7Trism6IhMmcE5yFYlzpOE0iAy0U8/gLcaW01oyahME49hhs08CcB2GNo3hZ7oFUeZDWncSZhWihAwY2I/Z6T+EVdKtO/SxGCRA1sNwAz4PIXZSoI5t8UjsQ0XRGTWjL9vC6Ycf0KOeWEhWb95GEB316QnjQA6Dbu1klaRLFOoMmDSJflTuIOee4AWalus0KE0GRIrm4ep+B98uPaSivLhSYulRZru0CatSophg8WjQeVskRaiaWOEhqqiOJhsm7pv+gyWYTUehtqLWf9ofQ0zKpR5nHssSnZNaSPWMysVs63FtON9zj+KIeou3PLq4NVKwrL0pH5uZxJ8skVUkFMR8SVgqt4fo3w1J325lzT9SE2S33OGQrOve4y6SJ5JDPpli4vVKvUYXXxg12enLfLP7Nnd0WJZrFNq6ZTGVT+pSUGFCXL/K4g8bw9ONPJXc8OKO2SuZ/rPJkytaERE+LgYQYQO/m7ezVNzGZ5W3QbWtfPGoDqr3thpyTrV7NDlAhTBQODnZVv/txQexlUC/YMitmtxhf6/0ZxtHUABD+WOgn88yWa+d9GV4zUA3kkcKEE/4gOIsyypFR0yIxz7blmP/jYpcNHkn63nEUytlsdS9L5HuTNkXOw73l0Mm1hpjQJIa7EpOkKBudBe/aNM="
+  },
+  {
+    "product": "pdfSweep",
+    "licensee": {
+      "company": "Shree Infotech",
+      "name": "Jaykumar Vaghasiya",
+      "email": "jay.shree210410@gmail.com"
+    },
+    "key": "70e11077e3ccee2633fe93bbf63f538d595fee9f7f89c37c4ce5a07eddecbdb0",
+    "creationDate": "2025-07-17",
+    "expirationDate": "2025-08-17",
+    "onExpiration": "fail",
+    "platform": "any",
+    "licenseType": "trial",
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "N3NtWwh+NROacvihCfH2yXrOrG7iQ1DtHKrb5TiSMbq1gJsvTDociunVGKqKPNulXsTJ9H+pfl3eJNNPdGKMJ5OCLIyJCRIkVYN5RaZkDin9AV9ftcY+CDVWkr7KKyYbD2o5R7qV9Agc9373+g0lkQF/D7eE13XkojizATyck9ruxQTziXEreTs0SKygHlUyIkHBmjr1RUrZqu0hb3sIrpGRwlA/BeqnA6OXjIuGZS97udqL0D76fcAd218v5JJp5LmS4eAk3xsCSymOls+iaBQKWxSKZD7UeE6kWGhDNsPJISYVsLBQS0OXWUmp8SYh+tNJXncDre2FAo8+rZ9L5TakarFDocVtr8cniR9Asv3NE687EUAGYT8PMBiUD97j1kx4NJyKgN/vvjBqqxcIbnyj9oxwp118c0N+CZsT8Wv6dQKrSXN+9geugHNvMOt+wZUitPZx74YJBawsesb1hRbjmNmpBX1cMRqCHpAJxh86Pm0UfUiyIHzeBJkpCnyfYoQQUBCKqljrMrLEjvJgQIZvIhEhdiRDAQOyxYr7E7+xCenF4GjVp/BCGQooOOHqT3RD0FRkzI9Ut2Rf+dBtERfbRTVon7tJiDQ97O2Tg4ciWC/ma+vNSibs29FfhDXBZuSlGLEtnjat+X3gsXk8LNOhmDwy8Zep96SgX5K66Ts="
+  },
+  {
+    "product": "pdfOcr-tesseract4",
+    "licensee": {
+      "company": "Shree Infotech",
+      "name": "Jaykumar Vaghasiya",
+      "email": "jay.shree210410@gmail.com"
+    },
+    "key": "70e11077e3ccee2633fe93bbf63f538d595fee9f7f89c37c4ce5a07eddecbdb0",
+    "creationDate": "2025-07-17",
+    "expirationDate": "2025-08-17",
+    "onExpiration": "fail",
+    "platform": "any",
+    "licenseType": "trial",
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "Mu4pI/kDhiwCUK+S4xHFdWtZRDg+HMqpk7vjSlo5NnF26M2R11TAQDQGa1VdlEIK9XNDI2qJIhbvOwqqFX+B0B8gsmzkNfTyM7z7dU+kXjGD+VOYdrirSZ/nQjtDpQ7VwQhLlUwXyTEIcrQrcpj4g9/aixfzy6Ohq1UU6DewdBuT2ys/45WDkM3H4CFmep1CQ/KUTgMwodSWY+Ao4XEmcZ8j7BqyC1lohYqMzBoscXn3YaKU2VaSW9eE3TmC866Mdz+g2yp+Xt5BbElysiDcPkXF1oM8JyrsWyP3/1d2Yg8obLEtcdeMq1R9rRDjtkivVwo+pviU8nXRlCYS8IqBTUtI90v8fink1Qg68yazjuc3jCskx1zyg3QerQUySyq6pwA4bhmUidjKsq89z+hmz3maVnOBJrHf4lK3wdLu3HbJaIitpfFI2AKB2iPeHkjCZhwuDP79fzKqI90HqYQeV2YcMYypNiQTMXMbBO7KufomeupudgZDZhhZcncoadWOyjMP5CvNiCtS9g8ReOLq+LTLvWad4s8QvTNhXzk1446A1bL/bFKL9NP79xhtAR639U9/iAqMx+I4tRrHmgLRGoRQpIOwQm+Ypxxf2v5JhpOE5EgCbU8j7aX/iiX2YBTeGXekoCVFdFynB2Ic59NHv0vEfWFKuKlkhznwuAWnNM4="
+  },
+  {
+    "product": "pdfOptimizer",
+    "licensee": {
+      "company": "Shree Infotech",
+      "name": "Jaykumar Vaghasiya",
+      "email": "jay.shree210410@gmail.com"
+    },
+    "key": "70e11077e3ccee2633fe93bbf63f538d595fee9f7f89c37c4ce5a07eddecbdb0",
+    "creationDate": "2025-07-17",
+    "expirationDate": "2025-08-17",
+    "onExpiration": "fail",
+    "platform": "any",
+    "licenseType": "trial",
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "bVu9VTKpM1RSZvfHkEccgJinpUHNbIHqk0MWfyV2jRphsrUrI7I/dabnmTrdD9cVkFqc5nhyKyDn7hT+Ug/Ah9eJNWL05tuZcotUKabdDXw/V+pxXE0L2UYbAwnpM2+mzHuPsTZtW1wUX0b/iXyWeIiIj1t/JkpQeLAuYI3vmf1xhKeMJI5Q4+MIXT82LaLrtqqsR6i/uzLhtyWRv3DCBP4xqkWgyKXSfIXJF3nGVv6ByCZWZXSduJxYEZP/diOwYy3q2NunV+WXBW+URXVPmwcNawmv0pqkMDuZZYrlumy64E+RZsqEJ31PfKf6umPvFVM42ISb6ENxvGoKmeXsAB8y8hBwAo0x/zVkOxAroVaTtLPzZhkl3QGNuBBcYa/h8mrRhRmVIUf/R01+KEApSJFYnr/ERpuA1bYv4TlIvgLlAV9T9V4Bow2O1jPezz3l3+3PjxaLvsfYXZPBFieEK7KI/08RMt9S8k4GEqgd/iQyFbmNeKh9wFgG+eQt1GPVMfI9gb/YVXHxQTtdz3A8Ph+XurjGmEvSY8sS5qcnpsMnceIih9on2nJy0Qc9NHO6b0WtQYI4b4oKm5epyEgkxbC46AQJDoyouZgLDqXNdY2ztDE18uoDFgNv38aTx0Z8X35AuGyfU1gZPwhyugv0j3fK2yVB4QRA5I0zyqzMJ6w="
+  },
+  {
+    "product": "pdfHtml",
+    "licensee": {
+      "company": "Shree Infotech",
+      "name": "Jaykumar Vaghasiya",
+      "email": "jay.shree210410@gmail.com"
+    },
+    "key": "70e11077e3ccee2633fe93bbf63f538d595fee9f7f89c37c4ce5a07eddecbdb0",
+    "creationDate": "2025-07-17",
+    "expirationDate": "2025-08-17",
+    "onExpiration": "fail",
+    "platform": "any",
+    "licenseType": "trial",
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "Ul7/5ZRVr7V9aUR945xQjJSh6fchBgxgJyXVdvHNB6l4MFhiQTmhiP3Nscx5SL5aKx+AC5AZ/9NAXHoARMrjUM2BSsm/FF5iN5wBFerSLG6x9cqQwYZ/V5+zzusPfNqPSgVH075OvQiE4Mrg7dXxaYgPIpM+2mVX4qhjAD2kI3XXkCAZTOb76s0atF7CbXHYm34iWy5Z3Re5Esx5aSwQt70TY3JZ0gZagWGn8O1UcyDRe78zehW7nBuNxXvGAE8W4ELpEfG9W4Mz2z4ZRsjZjprUx6YYwYZfKlkF/97MNdN39WXr8fpufRlDIH4wyzu1Y3rhFevmq/RSiePgaxFLVToYJxQ2uFl4zzMx6UwjaZSFR8uA7brVjBalFLNjkaqZ/CWKrqIKgcUAG6+RgOWBJexyWE4NdmvXgP09E92BTmfzB+Mcdfau7U2J1xZ3d8Xf4T4h3zouQ4FA01dGLNzKaahJU3qr9imFQqIHY3xz3f0+hZnOsO4LkAReRBvSVBI/N1nbtBIfhDNY0Mx8rsD50msxcb8aAjxLofiYnJqltZcW0kXFcI0HZ1SVampLvO17U4bEbGMR/DvTqz32lnum1LXIIPJJai2t8ZgW/zJC7/15VqiRR3u4jSy/k3YmaCy0RvR4BTKiE95sWavIjCC/lYXi+1VpyunTEX7pgjQqaxA="
+  },
+  {
+    "product": "pdfCalligraph",
+    "licensee": {
+      "company": "Shree Infotech",
+      "name": "Jaykumar Vaghasiya",
+      "email": "jay.shree210410@gmail.com"
+    },
+    "key": "70e11077e3ccee2633fe93bbf63f538d595fee9f7f89c37c4ce5a07eddecbdb0",
+    "creationDate": "2025-07-17",
+    "expirationDate": "2025-08-17",
+    "onExpiration": "fail",
+    "platform": "any",
+    "licenseType": "trial",
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "IrZW/Q6ndv0UPKbb3HM0cKNfSw5cnVt5R5tyoCNXvJM0Oi7lxmhOzkeTC9QyuZErjSZ0gAgNPf4ClbtuRXNtrhZLzDVreVgU8RrA4ZR4/MU2euSxo1vsBM5Rc/MQF56PYLH9F1oNrrQ8rOjlLguBlagda+Bru2mx+p9Dg3OblQVt5ZHEz9M6h7+GYe67rh53Pp10rpOXB5flSovn/lXEd2ZZyucu/pyE00nOInkgHD228R7VpbBtkD3jG+VXtmoIBRG0aFy8sUxq9TU2PRt/Tpih5DENo3GBFocUNCrI56Mgh5JkUmiJ4nkh/4Am5YHVobxYkd2NyjVjzGGjkqicGiLyimZH0ylumWnB+Q+7t/pZoW4tmm/FReNFSMHHD/VfMyhMoOp8RrKG5It+tmjnBYgV2lltiHflcbNPWUz7j6ojFEcE8I9fq2pw3ib/BBmGOviKbYsCwiU9phS5xbVx0Q4m0wgzE+oCrl7FTv6YmJsxpcG6Zt/AOZ9B+QzmqKOnSnMtu4t/WY20PMuS8UW6ulu53TtOMsPA5PK9J1X1Z4e6VZkG2onNMjrjUQLoJzrNWL/MMsLI7Tg/eM4lpQR7Lo8TvXA7yxdb9eXJ0GesGACHOtvVY1FZpzAAubeQJqI055abKAVQsbBdvM0dw0+I7nj2DPu/JRHqW/td1Notn+I="
+  }
+]

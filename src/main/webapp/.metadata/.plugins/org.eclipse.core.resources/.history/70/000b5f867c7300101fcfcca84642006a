@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+    <fontFamily name="DevanagariFont">
+        <normal>fonts/NotoSansDevanagari-Regular.ttf</normal>
+        <bold>fonts/NotoSansDevanagari-Bold.ttf</bold>
+        <italic>fonts/NotoSansDevanagari-Italic.ttf</italic>
+        <boldItalic>fonts/NotoSansDevanagari-BoldItalic.ttf</boldItalic>
+        <pdfEmbedded>true</pdfEmbedded>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <exportFonts>
+            <export key="net.sf.jasperreports.pdf">fonts/NotoSansDevanagari-Regular.ttf</export>
+        </exportFonts>
+    </fontFamily>
+    
+    <fontFamily name="GujaratiFont">
+        <normal>fonts/NotoSansGujarati-Regular.ttf</normal>
+        <bold>fonts/NotoSansGujarati-Bold.ttf</bold>
+        <pdfEmbedded>true</pdfEmbedded>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <exportFonts>
+            <export key="net.sf.jasperreports.pdf">fonts/NotoSansGujarati-Regular.ttf</export>
+        </exportFonts>
+    </fontFamily>
+    
+    <!-- Fallback font for mixed content -->
+    <fontFamily name="UniversalFont">
+        <normal>fonts/NotoSans-Regular.ttf</normal>
+        <bold>fonts/NotoSans-Bold.ttf</bold>
+        <pdfEmbedded>true</pdfEmbedded>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <exportFonts>
+            <export key="net.sf.jasperreports.pdf">fonts/NotoSans-Regular.ttf</export>
+        </exportFonts>
+    </fontFamily>
+</fontFamilies>
