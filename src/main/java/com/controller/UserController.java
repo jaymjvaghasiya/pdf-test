@@ -1,14 +1,10 @@
 package com.controller;
 
 import java.io.File;
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,8 +16,11 @@ import org.w3c.dom.NodeList;
 import com.bean.UserBean;
 import com.dao.UserDao;
 import com.itextpdf.io.font.PdfEncodings;
+import com.itextpdf.io.font.constants.StandardFonts;
 import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
+import com.itextpdf.kernel.colors.DeviceRgb;
+import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.geom.Rectangle;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -39,6 +38,7 @@ import com.itextpdf.layout.properties.Property;
 import com.itextpdf.layout.properties.TextAlignment;
 import com.itextpdf.layout.properties.UnitValue;
 
+import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletRequest;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRResultSetDataSource;
@@ -329,10 +329,12 @@ public class UserController {
 	    Table table = new Table(UnitValue.createPercentArray(columnWidths))
 	        .useAllAvailableWidth();
 	    
+	    PdfFont boldFont = PdfFontFactory.createFont(StandardFonts.COURIER_OBLIQUE);
+	    
 	    // Add headers to table
 	    if (headers.isEmpty()) {
 	        // Default headers if XML parsing failed
-	        table.addHeaderCell(new Cell().add(new Paragraph("ID")));
+	        table.addHeaderCell(new Cell().add(new Paragraph("ID").setFont(boldFont)));
 	        table.addHeaderCell(new Cell().add(new Paragraph("Name")));
 	        table.addHeaderCell(new Cell().add(new Paragraph("Name (Hindi)")));
 	        table.addHeaderCell(new Cell().add(new Paragraph("Name (Gujarati)")));
@@ -413,7 +415,7 @@ public class UserController {
 	            
 	            backgroundImage.setFixedPosition(0, 0);
 	            backgroundImage.scaleToFit(595, 842);
-	            backgroundImage.setOpacity(0.1f);
+	            backgroundImage.setOpacity(0.9f);
 	            
 	            layoutCanvas.add(backgroundImage);
 	            layoutCanvas.close();
@@ -436,14 +438,194 @@ public class UserController {
 	    return text.matches(".*[\\u0A80-\\u0AFF].*");
 	}
 	
-	
-	public static void main(String[] args) {
-		UserController uc = new UserController();
-		try {
-			uc.createPdf3();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public void createPdf4(ServletOutputStream servletOutputStream) throws Exception {
+	    ArrayList<UserBean> users = new UserDao().displayAllRecord();
+	    loadLicense();
+
+//	    new File("output").mkdirs();
+
+	    final PdfWriter writer = new PdfWriter(servletOutputStream);
+	    final PdfDocument pdfDocument = new PdfDocument(writer);
+	    final Document document = new Document(pdfDocument);
+
+	    final FontSet set = new FontSet();
+	    set.addFont(FONTS_DIR + "NotoNaskhArabic-Regular.ttf");
+	    set.addFont(FONTS_DIR + "NotoSansTamil-Regular.ttf");
+	    set.addFont(FONTS_DIR + "NotoSansDevanagari-Regular.ttf");
+	    set.addFont(FONTS_DIR + "NotoSansGujarati-Regular.ttf");
+	    set.addFont(FONTS_DIR + "FreeSans.ttf");
+	    set.addFont(FONTS_DIR + "arial.ttf");
+
+	    document.setFontProvider(new FontProvider(set));
+	    document.setProperty(Property.FONT, new String[]{"MyFontFamilyName"});
+
+	    // Parse JRXML file
+	    final File xmlFile = new File(XML_DIR + "demo.jrxml");
+	    final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	    final DocumentBuilder builder = factory.newDocumentBuilder();
+	    final org.w3c.dom.Document doc = builder.parse(xmlFile);
+
+	    // Extract title
+	    NodeList titleElements = doc.getElementsByTagName("staticText");
+	    String titleText = "User List";
+
+	    for (int i = 0; i < titleElements.getLength(); i++) {
+	        Node staticTextNode = titleElements.item(i);
+	        Node parentNode = staticTextNode.getParentNode();
+	        if (parentNode.getNodeName().equals("band") &&
+	            parentNode.getParentNode().getNodeName().equals("title")) {
+	            NodeList textNodes = ((Element) staticTextNode).getElementsByTagName("text");
+	            if (textNodes.getLength() > 0) {
+	                titleText = textNodes.item(0).getTextContent().trim();
+	                break;
+	            }
+	        }
+	    }
+
+	    Paragraph title = new Paragraph(titleText)
+	            .setFontSize(18)
+	            .setTextAlignment(TextAlignment.CENTER)
+	            .setMarginBottom(20);
+	    document.add(title);
+
+	    // Extract column headers
+	    List<String> headers = new ArrayList<>();
+	    List<Element> headerElementsList = new ArrayList<>();
+	    NodeList columnHeaderBands = doc.getElementsByTagName("columnHeader");
+
+	    if (columnHeaderBands.getLength() > 0) {
+	        Node columnHeaderBand = columnHeaderBands.item(0);
+	        NodeList staticTexts = ((Element) columnHeaderBand).getElementsByTagName("staticText");
+
+	        for (int i = 0; i < staticTexts.getLength(); i++) {
+	            Element staticTextEl = (Element) staticTexts.item(i);
+	            NodeList textNodes = staticTextEl.getElementsByTagName("text");
+	            if (textNodes.getLength() > 0) {
+	                String headerText = textNodes.item(0).getTextContent().trim();
+	                headers.add(headerText);
+	                headerElementsList.add(staticTextEl);
+	            }
+	        }
+	    }
+
+	    int columnCount = Math.max(headers.size(), 4);
+	    float[] columnWidths = new float[columnCount];
+	    Arrays.fill(columnWidths, 100f / columnCount);
+
+	    Table table = new Table(UnitValue.createPercentArray(columnWidths)).useAllAvailableWidth();
+
+	    // Add headers with style replication
+	    for (int i = 0; i < headers.size(); i++) {
+	        String header = headers.get(i);
+	        Element staticTextEl = headerElementsList.get(i);
+	        Element reportEl = (Element) staticTextEl.getElementsByTagName("reportElement").item(0);
+
+	        Cell headerCell = new Cell().add(new Paragraph(header));
+
+	        // Apply background color if Opaque
+	        String bgColor = reportEl.getAttribute("backcolor");
+	        String mode = reportEl.getAttribute("mode");
+	        if ("Opaque".equalsIgnoreCase(mode) && !bgColor.isEmpty()) {
+	            headerCell.setBackgroundColor(hexToRgb(bgColor));
+	        }
+
+	        // Text color
+	        String foreColor = reportEl.getAttribute("forecolor");
+	        if (!foreColor.isEmpty()) {
+	            headerCell.setFontColor(hexToRgb(foreColor));
+	        }
+
+	        // Alignment
+	        NodeList textElementNodes = staticTextEl.getElementsByTagName("textElement");
+	        if (textElementNodes.getLength() > 0) {
+	            Element textEl = (Element) textElementNodes.item(0);
+	            String align = textEl.getAttribute("textAlignment");
+	            if ("Center".equalsIgnoreCase(align)) headerCell.setTextAlignment(TextAlignment.CENTER);
+	            else if ("Right".equalsIgnoreCase(align)) headerCell.setTextAlignment(TextAlignment.RIGHT);
+	            else headerCell.setTextAlignment(TextAlignment.LEFT);
+	        }
+
+		    PdfFont boldFont = PdfFontFactory.createFont(StandardFonts.COURIER_OBLIQUE);
+	        
+	        // Font
+	        NodeList fontNodes = staticTextEl.getElementsByTagName("font");
+	        if (fontNodes.getLength() > 0) {
+	            Element fontEl = (Element) fontNodes.item(0);
+	            String fontName = fontEl.getAttribute("fontName");
+	            String size = fontEl.getAttribute("size");
+	            boolean isBold = "true".equalsIgnoreCase(fontEl.getAttribute("isBold"));
+	            boolean isItalic = "true".equalsIgnoreCase(fontEl.getAttribute("isItalic"));
+	            
+	            PdfFont font;
+	            try {
+	            	if (isBold) {	            		
+	            		font = PdfFontFactory.createFont(StandardFonts.TIMES_BOLDITALIC);
+	            	} else {	            		
+	            		font = PdfFontFactory.createFont(FONTS_DIR + fontName + ".ttf", PdfEncodings.IDENTITY_H);
+	            	}
+	                headerCell.setFont(font);
+	            } catch (Exception e) {
+	                if (isBold) {
+	                    font = PdfFontFactory.createFont(StandardFonts.HELVETICA_BOLD);
+	                } else {
+	                    font = PdfFontFactory.createFont(StandardFonts.HELVETICA);
+	                }
+	                headerCell.setFont(font);
+	                System.err.println("Font load failed, using fallback: " + e.getMessage());
+	            }
+
+	            if (!size.isEmpty()) headerCell.setFontSize(Float.parseFloat(size));
+	            
+	        }
+
+	        table.addHeaderCell(headerCell);
+	    }
+
+	    // Add user data
+	    for (UserBean user : users) {
+	        table.addCell(new Cell().add(new Paragraph(user.getId() != null ? user.getId().toString() : "")));
+	        table.addCell(new Cell().add(new Paragraph(user.getName() != null ? user.getName() : "")));
+
+	        Cell hindiCell = new Cell().add(new Paragraph(user.getName_hin() != null ? user.getName_hin() : ""));
+	        hindiCell.setFont(PdfFontFactory.createFont(FONTS_DIR + "NotoSansDevanagari-Regular.ttf", PdfEncodings.IDENTITY_H));
+	        table.addCell(hindiCell);
+
+	        Cell gujaratiCell = new Cell().add(new Paragraph(user.getName_guj() != null ? user.getName_guj() : ""));
+	        gujaratiCell.setFont(PdfFontFactory.createFont(FONTS_DIR + "AnekGujarati-Regular.ttf", PdfEncodings.IDENTITY_H));
+	        table.addCell(gujaratiCell);
+	    }
+
+	    document.add(table);
+
+	    Paragraph footer = new Paragraph("Total Users: " + users.size())
+	            .setTextAlignment(TextAlignment.RIGHT)
+	            .setMarginTop(20)
+	            .setFontSize(10);
+	    document.add(footer);
+
+	    addBackgroundImageAfterContent(pdfDocument);
+
+	    document.close();
+	    pdfDocument.close();
 	}
+
+	// Helper: Convert hex color to iText DeviceRgb
+	private static DeviceRgb hexToRgb(String hex) {
+	    hex = hex.replace("#", "");
+	    int r = Integer.parseInt(hex.substring(0, 2), 16);
+	    int g = Integer.parseInt(hex.substring(2, 4), 16);
+	    int b = Integer.parseInt(hex.substring(4, 6), 16);
+	    return new DeviceRgb(r, g, b);
+	}
+
+//	
+//	public static void main(String[] args) {
+//		UserController uc = new UserController();
+//		try {
+//			uc.createPdf4();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
 
 }
