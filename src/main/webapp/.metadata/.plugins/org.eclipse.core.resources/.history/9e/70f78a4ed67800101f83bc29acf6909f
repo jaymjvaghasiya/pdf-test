@@ -29,52 +29,40 @@
 	<columnHeader>
 		<band height="41" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="11" width="50" height="30" backcolor="#C2C2C2" uuid="5228f166-3ca0-4d74-99d9-905a5d51d4b6">
+				<reportElement x="0" y="11" width="50" height="30" uuid="5228f166-3ca0-4d74-99d9-905a5d51d4b6">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box>
-					<pen lineColor="#A6A2A2"/>
-				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
 					<font size="15"/>
 				</textElement>
 				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="50" y="11" width="160" height="30" backcolor="#C2C2C2" uuid="cbddba9b-674d-41bf-bf05-e881647c4f1c">
+				<reportElement x="50" y="11" width="160" height="30" uuid="cbddba9b-674d-41bf-bf05-e881647c4f1c">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box>
-					<pen lineColor="#A6A2A2"/>
-				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
 					<font size="15"/>
 				</textElement>
 				<text><![CDATA[Name]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="210" y="11" width="170" height="30" backcolor="#C2C2C2" uuid="8b33ad9e-270e-45b5-841b-00c07bc0dd53">
+				<reportElement x="210" y="11" width="170" height="30" uuid="8b33ad9e-270e-45b5-841b-00c07bc0dd53">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box>
-					<pen lineColor="#A6A2A2"/>
-				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
 					<font size="15"/>
 				</textElement>
 				<text><![CDATA[Name (Hindi)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="380" y="11" width="174" height="30" backcolor="#C2C2C2" uuid="15fb1cc8-db12-4235-bf78-f0162dfb4758">
+				<reportElement x="380" y="11" width="174" height="30" uuid="15fb1cc8-db12-4235-bf78-f0162dfb4758">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box>
-					<pen lineColor="#A6A2A2"/>
-				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
 					<font size="15"/>
 				</textElement>
